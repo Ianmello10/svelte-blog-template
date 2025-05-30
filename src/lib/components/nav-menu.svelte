@@ -1,0 +1,84 @@
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { page } from '$app/state';
+	import type { Post } from '$lib/types';
+	import ThemeToggle from './theme-toggle.svelte';
+
+	const pageId = page.route.id;
+
+	let { postTitle } = $props();
+	let search = $state<string>('');
+	let showDropdown = $state<boolean>(false);
+
+	onMount(() => {
+		function handleClick(event: MouseEvent) {
+			if (!(event.target as HTMLElement)?.closest('.dropdown-ul')) {
+				showDropdown = false;
+			}
+		}
+		document.addEventListener('mousedown', handleClick);
+		return () => document.removeEventListener('mousedown', handleClick);
+	});
+
+	// Filtra postTitle retornando o objeto completo cujo metadata.title corresponde à busca
+	const filtered = $derived(() => {
+		if (!Array.isArray(postTitle) || search.length === 0) return [];
+		return postTitle.filter((item) =>
+			item.metadata.title.toLowerCase().includes(search.toLowerCase())
+		) as Post[];
+	});
+</script>
+
+<div class="navbar bg-base-100 border-base-300 mt-10 rounded-2xl border-1 shadow-md">
+	<nav class="flex w-full items-center justify-between">
+		<a class="btn btn-ghost text-md mr-2 md:mr-0 md:text-xl" href="/">Svelblog</a>
+		<div class="flex items-center gap-2">
+			{#if pageId === '/blog'}
+				<label class="input">
+					<svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<g
+							stroke-linejoin="round"
+							stroke-linecap="round"
+							stroke-width="2.5"
+							fill="none"
+							stroke="currentColor"
+						>
+							<circle cx="11" cy="11" r="8"></circle>
+							<path d="m21 21-4.3-4.3"></path>
+						</g>
+					</svg>
+					<input
+						type="search"
+						class=" px-2"
+						placeholder="Search"
+						bind:value={search}
+						onfocus={() => (showDropdown = true)}
+					/>
+					<span class="kbd-group flex w-10 justify-end gap-1">
+						{#if showDropdown === false && search.length === 0}
+							<kbd class="kbd kbd-sm">⌘</kbd>
+							<kbd class="kbd kbd-sm">K</kbd>
+						{/if}
+					</span>
+
+					{#if showDropdown === true && filtered().length > 0}
+						<ul
+							class="dropdown-ul bg-base-100 border-base-300 absolute top-full left-0 z-10 mt-2 w-full rounded-xl border shadow"
+						>
+							{#each filtered() as post}
+								<li class="hover:bg-base-200 cursor-pointer px-4 py-2">
+									<a href="/blog/{post.metadata.slug}" class="text-base-content">
+										{post.metadata.title}
+									</a>
+								</li>
+							{/each}
+						</ul>
+					{/if}
+				</label>
+			{:else}
+				<a class="btn btn-ghost" href="/blog">Blog</a>
+			{/if}
+			<ThemeToggle />
+		</div>
+	</nav>
+</div>

@@ -1,0 +1,88 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui" {
+
+   themes: light --default, dark --prefersdark, forest;
+
+ }
+@plugin "daisyui/theme" {
+  name: "sleek-dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+
+  --color-base-100: oklch(20% 0.005 270);  /* fundo principal - bem escuro */
+  --color-base-200: oklch(25% 0.005 270);  /* superfície */
+  --color-base-300: oklch(32% 0.005 270);  /* superfície elevada */
+  --color-base-content: oklch(95% 0.01 270); /* texto principal - quase branco */
+
+  --color-primary: oklch(65% 0.1 260);     /* roxo elegante */
+  --color-primary-content: oklch(100% 0 0); /* branco para contraste */
+
+  --color-secondary: oklch(70% 0.1 180);   /* azul-esverdeado suave */
+  --color-secondary-content: oklch(100% 0 0);
+
+  --color-accent: oklch(75% 0.16 90);      /* amarelo vibrante */
+  --color-accent-content: oklch(20% 0 0);
+
+  --color-neutral: oklch(45% 0.01 270);    /* cinza intermediário */
+  --color-neutral-content: oklch(90% 0.01 270);
+
+  --color-info: oklch(65% 0.1 240);
+  --color-success: oklch(70% 0.1 140);
+  --color-warning: oklch(75% 0.15 80);
+  --color-error: oklch(60% 0.18 25);
+
+  --color-info-content: oklch(100% 0 0);
+  --color-success-content: oklch(100% 0 0);
+  --color-warning-content: oklch(20% 0 0);
+  --color-error-content: oklch(100% 0 0);
+
+  --radius-selector: 0.375rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --border: 1px;
+  --depth: 0.2;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "sleek-light";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: oklch(98% 0.01 270); /* fundo principal - muito claro */
+  --color-base-200: oklch(95% 0.01 270); /* superfície */
+  --color-base-300: oklch(90% 0.01 270); /* superfície elevada */
+  --color-base-content: oklch(20% 0.01 270); /* texto principal - escuro */
+
+  --color-primary: oklch(60% 0.1 260); /* roxo elegante */
+  --color-primary-content: oklch(100% 0 0); /* branco para contraste */
+
+  --color-secondary: oklch(70% 0.1 180); /* azul-esverdeado suave */
+  --color-secondary-content: oklch(100% 0 0);
+
+  --color-accent: oklch(75% 0.16 90); /* amarelo vibrante */
+  --color-accent-content: oklch(20% 0 0);
+
+  --color-neutral: oklch(85% 0.01 270); /* cinza claro */
+  --color-neutral-content: oklch(20% 0.01 270);
+
+  --color-info: oklch(70% 0.1 240);
+  --color-success: oklch(75% 0.1 140);
+  --color-warning: oklch(80% 0.15 80);
+  --color-error: oklch(65% 0.18 25);
+
+  --color-info-content: oklch(20% 0 0);
+  --color-success-content: oklch(20% 0 0);
+  --color-warning-content: oklch(20% 0 0);
+  --color-error-content: oklch(100% 0 0);
+
+  --radius-selector: 0.375rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --border: 1px;
+  --depth: 0.2;
+  --noise: 0;
+}
