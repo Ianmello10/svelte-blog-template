@@ -66,8 +66,8 @@
 							class="dropdown-ul bg-base-100 border-base-300 absolute top-full left-0 z-10 mt-2 w-full rounded-xl border shadow"
 						>
 							{#each filtered() as post}
-								<li class="hover:bg-base-200 cursor-pointer px-4 py-2">
-									<a href="/blog/{post.metadata.slug}" class="text-base-content">
+								<li class="hover:bg-base-200 cursor-pointer overflow-hidden px-2 py-2">
+									<a href="/blog/{post.metadata.slug}" class="text-base-content box-border">
 										{post.metadata.title}
 									</a>
 								</li>
