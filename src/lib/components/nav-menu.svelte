@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import type { Post } from '$lib/types';
 	import ThemeToggle from './theme-toggle.svelte';
+	import type { Attachment } from 'svelte/attachments';
 
 	const pageId = page.route.id;
 
@@ -10,17 +10,21 @@
 	let search = $state<string>('');
 	let showDropdown = $state<boolean>(false);
 
-	onMount(() => {
+	const clickOutside: Attachment = (node) => {
 		function handleClick(event: MouseEvent) {
-			if (!(event.target as HTMLElement)?.closest('.dropdown-ul')) {
+			// If the clicked element is not inside `node`, close dropdown
+			if (!(event.target as HTMLElement)?.closest?.(node.tagName)) {
 				showDropdown = false;
 			}
 		}
-		document.addEventListener('mousedown', handleClick);
-		return () => document.removeEventListener('mousedown', handleClick);
-	});
 
-	// Filtra postTitle retornando o objeto completo cujo metadata.title corresponde à busca
+		document.addEventListener('mousedown', handleClick);
+		return () => {
+			document.removeEventListener('mousedown', handleClick);
+		};
+	};
+
+	// Derived list of posts matching the search term:
 	const filtered = $derived(() => {
 		if (!Array.isArray(postTitle) || search.length === 0) return [];
 		return postTitle.filter((item) =>
@@ -34,7 +38,9 @@
 		<a class="btn btn-ghost text-md mr-2 md:mr-0 md:text-xl" href="/">Svelblog</a>
 		<div class="flex items-center gap-2">
 			{#if pageId === '/blog'}
-				<label class="input">
+				<!-- Attach the clickOutside attachment to this <label>,
+             so any outside click will set showDropdown = false. -->
+				<label class="input" {@attach clickOutside}>
 					<svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<g
 							stroke-linejoin="round"
@@ -49,7 +55,7 @@
 					</svg>
 					<input
 						type="search"
-						class=" px-2"
+						class="px-2"
 						placeholder="Search"
 						bind:value={search}
 						onfocus={() => (showDropdown = true)}
@@ -78,6 +84,7 @@
 			{:else}
 				<a class="btn btn-ghost" href="/blog">Blog</a>
 			{/if}
+
 			<ThemeToggle />
 		</div>
 	</nav>
