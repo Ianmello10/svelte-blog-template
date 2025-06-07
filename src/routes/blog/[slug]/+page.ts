@@ -1,8 +1,9 @@
-import type { Post } from '$lib/types.js';
+import type { Post, PostMetadata } from '$lib/types.ts';
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator } from './$types';
+import type { PageLoad } from './$types.ts';
 
-export async function load({ params }) {
+export const load: PageLoad = async ({ params }) => {
 	const post: Post = await import(`../../../blog/posts/${params.slug}.md`);
 
 	if (!post) {
@@ -13,7 +14,7 @@ export async function load({ params }) {
 		content: post.default,
 		meta: post.metadata
 	};
-}
+};
 
 export const entries: EntryGenerator = async () => {
 	const modules = import.meta.glob('../../../blog/posts/*.md');

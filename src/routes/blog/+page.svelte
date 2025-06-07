@@ -4,7 +4,7 @@
 	import CardPost from '$lib/components/card-post.svelte';
 	import type { Post } from '$lib/types';
 
-	let { data } = $props() as { data: { posts: Post[] } };
+	let { data } = $props();
 </script>
 
 <svelte:head>

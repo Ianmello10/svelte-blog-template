@@ -20,7 +20,7 @@
 	<section class="container">
 		<div class="container mx-auto mt-4 px-4 py-12">
 			<h2 class="mb-16 text-center text-3xl font-bold md:text-4xl">
-				Blog template powered by <span class="underline decoration-orange-500">Svelekit</span> and Markdown
+				Blog template powered by <span class="underline decoration-orange-500">Sveltekit</span> and Markdown
 			</h2>
 
 			<div class="mt-2 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

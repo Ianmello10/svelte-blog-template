@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Container from '$lib/components/container.svelte';
 	import NavMenu from '$lib/components/nav-menu.svelte';
-	import { formatReadableDate } from '$lib/format-date';
+
 	let { data } = $props();
 </script>
 
@@ -18,7 +18,7 @@
 <Container>
 	<NavMenu postTitle />
 	<article class="mt-10 w-full">
-		<span class="bg-base-100">{formatReadableDate(data.meta.date)}</span>
+		<span class="bg-base-100">{data.meta.date}</span>
 		<div class="prose prose-lg box-border !w-full max-w-none overflow-hidden break-words">
 			<data.content />
 		</div>
