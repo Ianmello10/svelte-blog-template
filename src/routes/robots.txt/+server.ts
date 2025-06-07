@@ -40,6 +40,7 @@ export function GET({ url }) {
  * @param {string} baseUrl - The site's base URL
  * @returns {string} The robots.txt content
  */
+
 function generateProductionRobotsTxt(baseUrl: string): string {
 	return `# SEO-optimized robots.txt - Production Environment
 User-agent: *

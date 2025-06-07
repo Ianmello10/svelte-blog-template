@@ -1,11 +1,10 @@
 <script lang="ts">
 	import Container from '$lib/components/container.svelte';
 	import NavMenu from '$lib/components/nav-menu.svelte';
-	import type { Post } from '$lib/types';
 	import IconServer from 'lucide-svelte/icons/server';
 	import Map from 'lucide-svelte/icons/map';
 	import { Bot } from 'lucide-svelte';
-	let { data } = $props() as { data: { posts: Post[] } };
+	let { data } = $props();
 </script>
 
 <svelte:head>
