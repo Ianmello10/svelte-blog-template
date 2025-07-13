@@ -33,13 +33,16 @@
 	});
 </script>
 
-<div class="navbar bg-base-100 border-base-300 mt-10 rounded-2xl border-1 shadow-md">
-	<nav class="flex w-full items-center justify-between">
-		<a class="btn btn-ghost text-md mr-2 md:mr-0 md:text-xl" href="/">Svelblog</a>
+<nav
+	class="navbar bg-base-100/80 border-base-300/50 shadow-base-300/10 sticky
+	top-4 z-50 mx-auto mt-4 w-full max-w-7xl rounded-2xl border shadow-md backdrop-blur-md"
+>
+	<div class="flex w-full items-center justify-between px-4 py-2">
+		<a class="btn btn-ghost text-lg md:text-xl" href="/">Svelblog</a>
+
 		<div class="flex items-center gap-2">
 			{#if pageId === '/blog'}
-				<!-- Attach the clickOutside attachment to this <label>,
-             so any outside click will set showDropdown = false. -->
+				<!-- Dropdown do DaisyUI -->
 				<label class="input" {@attach clickOutside}>
 					<svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<g
@@ -87,5 +90,5 @@
 
 			<ThemeToggle />
 		</div>
-	</nav>
-</div>
+	</div>
+</nav>

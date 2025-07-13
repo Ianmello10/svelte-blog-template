@@ -21,6 +21,7 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"@tailwindcss/typography": "^0.5.15",
 		"@tailwindcss/vite": "^4.0.0",
+		"@types/node": "^24.0.13",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "^10.0.1",
 		"eslint-plugin-svelte": "^3.0.0",
@@ -38,6 +39,13 @@
 	},
 	"dependencies": {
 		"daisyui": "^5.0.35",
-		"lucide-svelte": "^0.511.0"
+		"lucide-svelte": "^0.511.0",
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-slug": "^6.0.0",
+		"remark-flexible-containers": "^1.3.0",
+		"remark-flexible-toc": "^1.2.0",
+		"to-vfile": "^8.0.0",
+		"vfile": "^6.0.3",
+		"vfile-matter": "^5.0.1"
 	}
 }

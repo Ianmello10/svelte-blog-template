@@ -11,8 +11,15 @@ export type PostMetadata = {
 	categories: Categories[];
 	published: boolean;
 	slug: string;
+	toc: TocItem[];
 };
 export interface Post {
 	metadata: PostMetadata;
 	default: Component;
 }
+
+export type TocItem = {
+	value: string;
+	depth: number;
+	href: string;
+};
