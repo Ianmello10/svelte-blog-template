@@ -5,41 +5,33 @@
 </script>
 
 <article
-	class="card bg-base-100 border-base-300 border shadow-md transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+	class="group bg-base-200 border-base-300/50 hover:border-primary/30 rounded-lg border
+         p-6 hover:shadow-sm"
 >
-	<div class="card-body p-5">
-		<!-- Título -->
-		<h3 class="card-title text-base-content text-lg font-semibold">{title}</h3>
+	<h3 class="text-base-content mb-2 text-lg font-medium">{title}</h3>
 
-		<!-- Categorias -->
-		<div class="mt-1 flex flex-wrap gap-2">
-			{#each categories as category}
-				<span class="badge badge-soft badge-sm">{category}</span>
-			{/each}
-		</div>
-
-		<!-- Descrição -->
-		<p class="text-neutral-content mt-2 text-sm leading-relaxed">{description}</p>
-
-		<!-- Ação -->
-		<div class="card-actions mt-4 justify-start">
-			<a href="/blog/{slug}" class="btn bg-base-200 btn-sm transition-none">
-				Read post
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="2"
-					stroke="currentColor"
-					class="ml-1 h-4 w-4"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-					/>
-				</svg>
-			</a>
-		</div>
+	<div class="mb-3 flex flex-wrap gap-1">
+		{#each categories as c}
+			<span class="badge badge-soft badge-primary badge-sm text-primary-content text-xs">
+				{c}
+			</span>
+		{/each}
 	</div>
+
+	<p class="text-muted mb-4 text-sm leading-relaxed">{description}</p>
+
+	<a
+		href="/blog/{slug}"
+		class="  text-primary hover:text-primary inline-flex items-center text-xs font-medium transition-colors"
+	>
+		Read more
+		<svg
+			class="ml-1 h-3 w-3 transition-transform group-hover:translate-x-0.5"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor"
+		>
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+		</svg>
+	</a>
 </article>

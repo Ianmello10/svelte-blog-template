@@ -15,7 +15,7 @@
 	});
 
 	function toggleTheme() {
-		theme = theme === 'sleek-dark' ? 'sleek-light' : 'sleek-dark';
+		theme = theme === 'monochrome-pro' ? 'monochrome-pro-light' : 'monochrome-pro';
 		document.documentElement.setAttribute('data-theme', theme);
 		localStorage.setItem('theme', theme);
 	}

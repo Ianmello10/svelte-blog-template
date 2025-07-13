@@ -35,10 +35,10 @@
 
 <nav
 	class="navbar bg-base-100/80 border-base-300/50 shadow-base-300/10 sticky
-	top-4 z-50 mx-auto mt-4 w-full max-w-7xl rounded-2xl border shadow-md backdrop-blur-md"
+	top-4 z-50 mx-auto mt-4 w-full max-w-7xl rounded-2xl border shadow-sm backdrop-blur-md"
 >
 	<div class="flex w-full items-center justify-between px-4 py-2">
-		<a class="btn btn-ghost text-lg md:text-xl" href="/">Svelblog</a>
+		<a class="btn btn-ghost text-lg" href="/">Svelblog</a>
 
 		<div class="flex items-center gap-2">
 			{#if pageId === '/blog'}

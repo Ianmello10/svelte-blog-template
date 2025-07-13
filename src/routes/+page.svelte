@@ -21,17 +21,21 @@
 		<!-- Hero Section -->
 		<div class="mb-20 text-center">
 			<h1
-				class=" mb-6 text-4xl font-bold
+				class="mb-6 text-4xl font-bold
 					tracking-tight md:text-5xl lg:text-6xl"
 			>
 				Blog template powered by
 				<span class="relative inline-block">
-					<span class="relative z-10 text-orange-500">Sveltekit</span>
+					<span
+						class="bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400 bg-clip-text text-transparent"
+					>
+						SvelteKit
+					</span>
 					<span class="absolute inset-x-0 bottom-1 h-3 -skew-x-12 bg-orange-500/20"></span>
 				</span>
 				and Markdown
 			</h1>
-			<p class="text-muted-foreground mx-auto max-w-2xl text-xl leading-relaxed">
+			<p class="text-dimmed mx-auto max-w-2xl text-xl leading-relaxed">
 				Discover powerful features that make your blog fast, SEO-friendly, and developer-focused
 			</p>
 		</div>
@@ -40,19 +44,20 @@
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-12">
 			<!-- SSR/SSG Card -->
 			<div
-				class="group bg-card relative rounded-2xl border border-zinc-700 p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+				class="group bg-base-200 border-base-300 hover:border-primary/30
+				relative rounded-2xl border p-8 shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
 			>
 				<div
-					class="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+					class="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/10 via-purple-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 				></div>
 				<div class="relative z-10">
 					<div
-						class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/10 transition-colors duration-300 group-hover:bg-blue-500/20"
+						class="bg-primary/10 group-hover:bg-primary/20 mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-300"
 					>
-						<IconServer size={32} class="text-blue-500" />
+						<IconServer size={32} class="text-primary" />
 					</div>
 					<h3 class="text-card-foreground mb-4 text-2xl font-bold">SSR/SSG</h3>
-					<p class="text-muted-foreground leading-relaxed">
+					<p class="text-muted leading-relaxed">
 						Server-side rendering and static generation for maximum performance and better indexing.
 					</p>
 				</div>
@@ -60,20 +65,19 @@
 
 			<!-- Robots Card -->
 			<div
-				class="group bg-card relative rounded-2xl border
-				border-zinc-700 p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+				class="group bg-base-200 border-base-300 hover:border-accent/30 relative rounded-2xl border p-8 shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
 			>
 				<div
-					class="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+					class="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-teal-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 				></div>
 				<div class="relative z-10">
 					<div
-						class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/10 transition-colors duration-300 group-hover:bg-cyan-500/20"
+						class="bg-accent/10 group-hover:bg-accent/20 mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-300"
 					>
-						<Bot size={32} class="text-cyan-500" />
+						<Bot size={32} class="text-accent" />
 					</div>
 					<h3 class="text-card-foreground mb-4 text-2xl font-bold">Robots</h3>
-					<p class="text-muted-foreground leading-relaxed">
+					<p class="text-muted leading-relaxed">
 						Indexing control with optimized robots.txt and custom settings for SEO.
 					</p>
 				</div>
@@ -81,24 +85,20 @@
 
 			<!-- Sitemap Card -->
 			<div
-				class="group bg-card relative rounded-2xl border
-				 border-zinc-700
-				 p-8
-				shadow-sm transition-all duration-300
-				hover:-translate-y-2 hover:shadow-xl
-				 md:col-span-2 lg:col-span-1"
+				class="group bg-base-200 border-base-300 hover:border-success/30 relative rounded-2xl border p-8 shadow-sm
+				transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl md:col-span-2 lg:col-span-1"
 			>
 				<div
-					class="absolute inset-0 rounded-2xl bg-gradient-to-br from-green-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+					class="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/10 via-green-500/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
 				></div>
 				<div class="relative z-10">
 					<div
-						class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-green-500/10 transition-colors duration-300 group-hover:bg-green-500/20"
+						class="bg-success/10 group-hover:bg-success/20 mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-300"
 					>
-						<Map size={32} class="text-green-500" />
+						<Map size={32} class="text-success" />
 					</div>
 					<h3 class="text-card-foreground mb-4 text-2xl font-bold">Sitemap</h3>
-					<p class="text-muted-foreground leading-relaxed">
+					<p class="text-muted leading-relaxed">
 						Automatic generation of dynamic sitemap for better crawling by search engines.
 					</p>
 				</div>
@@ -108,12 +108,12 @@
 		<!-- Call to Action -->
 		<div class="mt-20 text-center">
 			<div
-				class="bg-muted/50 text-muted-foreground mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm"
+				class="bg-base-200/50 text-muted inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm"
 			>
-				<div class="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
+				<div class="bg-success h-2 w-2 animate-pulse rounded-full"></div>
 				Ready to start blogging
 			</div>
-			<p class="text-muted-foreground mx-auto max-w-md text-lg">
+			<p class="text-muted mx-auto mt-6 max-w-md text-lg">
 				Start creating amazing content with our powerful and flexible blog template
 			</p>
 		</div>
