@@ -5,14 +5,14 @@
 </script>
 
 <article
-	class="group bg-base-200 border-base-300/50 hover:border-primary/30 rounded-lg border
-         p-6 hover:shadow-sm"
+	class="group bg-base-200 border-base-300/50 rounded-lg border p-6
+         hover:shadow-sm"
 >
 	<h3 class="text-base-content mb-2 text-lg font-medium">{title}</h3>
 
 	<div class="mb-3 flex flex-wrap gap-1">
 		{#each categories as c}
-			<span class="badge badge-soft badge-primary badge-sm text-primary-content text-xs">
+			<span class="badge primary badge-sm text-primary-content text-xs">
 				{c}
 			</span>
 		{/each}
@@ -22,7 +22,7 @@
 
 	<a
 		href="/blog/{slug}"
-		class="  text-primary hover:text-primary inline-flex items-center text-xs font-medium transition-colors"
+		class="  text-content inline-flex items-center text-xs font-medium transition-colors"
 	>
 		Read more
 		<svg

@@ -72,7 +72,7 @@
 			{#if data.meta.categories && data.meta.categories.length > 0}
 				<div class="mt-6 flex flex-wrap gap-2">
 					{#each data.meta.categories as category}
-						<span class="badge badge-soft badge-primary text-primary-content text-sm">
+						<span class="badge text-content text-sm">
 							{category}
 						</span>
 					{/each}

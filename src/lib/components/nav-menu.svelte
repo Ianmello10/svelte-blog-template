@@ -34,17 +34,26 @@
 </script>
 
 <nav
-	class="navbar bg-base-100/80 border-base-300/50 shadow-base-300/10 sticky
-	top-4 z-50 mx-auto mt-4 w-full max-w-7xl rounded-2xl border shadow-sm backdrop-blur-md"
+	class="navbar bg-base-100/80 shadow-base-300/10
+	 border-base-300/50 sticky top-4 z-50 mx-auto mt-4 w-full max-w-7xl rounded-2xl border
+	  shadow backdrop-blur-md
+	 "
 >
 	<div class="flex w-full items-center justify-between px-4 py-2">
-		<a class="btn btn-ghost text-lg" href="/">Svelblog</a>
+		<a class="btn btn-ghost text-base-content text-lg" href="/">Svelblog</a>
 
 		<div class="flex items-center gap-2">
 			{#if pageId === '/blog'}
 				<!-- Dropdown do DaisyUI -->
-				<label class="input" {@attach clickOutside}>
-					<svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<label
+					class="input bg-base-200 border-base-300 text-base-content border"
+					{@attach clickOutside}
+				>
+					<svg
+						class="text-base-content h-[1em] opacity-50"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+					>
 						<g
 							stroke-linejoin="round"
 							stroke-linecap="round"
@@ -58,15 +67,15 @@
 					</svg>
 					<input
 						type="search"
-						class="px-2"
+						class="text-base-content placeholder-base-content/60 bg-transparent px-2 focus:outline-none"
 						placeholder="Search"
 						bind:value={search}
 						onfocus={() => (showDropdown = true)}
 					/>
 					<span class="kbd-group flex w-10 justify-end gap-1">
 						{#if showDropdown === false && search.length === 0}
-							<kbd class="kbd kbd-sm">⌘</kbd>
-							<kbd class="kbd kbd-sm">K</kbd>
+							<kbd class="kbd kbd-sm bg-base-300 text-base-content">⌘</kbd>
+							<kbd class="kbd kbd-sm bg-base-300 text-base-content">K</kbd>
 						{/if}
 					</span>
 
@@ -85,7 +94,7 @@
 					{/if}
 				</label>
 			{:else}
-				<a class="btn btn-ghost" href="/blog">Blog</a>
+				<a class="btn btn-ghost text-base-content" href="/blog">Blog</a>
 			{/if}
 
 			<ThemeToggle />
