@@ -26,6 +26,7 @@
 						author={post.metadata.author}
 						slug={post.metadata.slug}
 						categories={post.metadata.categories}
+						toc={post.metadata.toc}
 					/>
 				</li>
 			{/each}

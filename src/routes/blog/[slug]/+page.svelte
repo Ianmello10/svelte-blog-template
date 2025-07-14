@@ -22,7 +22,7 @@
 	<div class="mt-10 mb-4">
 		<a
 			href="/blog"
-			class="group text-neutral-content hover:text-primary inline-flex items-center
+			class="group text-base-content hover:text-primary inline-flex items-center
              text-sm transition-colors"
 			aria-label="Back to blog"
 		>
@@ -43,7 +43,7 @@
 		<header class="border-base-300 mb-10 border-b pb-8">
 			<!-- Publication Date -->
 			<div class="mt-6 mb-6">
-				<time datetime={data.meta.date} class="badge badge-ghost badge-soft text-sm">
+				<time datetime={data.meta.date} class="badge badge-ghost p-2 py-3 text-sm">
 					<svg class="mr-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path
 							stroke-linecap="round"
@@ -72,7 +72,7 @@
 			{#if data.meta.categories && data.meta.categories.length > 0}
 				<div class="mt-6 flex flex-wrap gap-2">
 					{#each data.meta.categories as category}
-						<span class="badge text-content text-sm">
+						<span class="badge badge-ghost text-content text-sm">
 							{category}
 						</span>
 					{/each}

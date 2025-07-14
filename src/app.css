@@ -9,70 +9,65 @@
 	name: 'monochrome-pro';
 	default: true;
 	color-scheme: dark;
-
-	--color-base-100: oklch(12% 0 0);
-	--color-base-200: oklch(18% 0 0);
-	--color-base-300: oklch(28% 0 0);
-	--color-base-content: oklch(94% 0 0);
-
-	/* 🎨 Cores neutras e de conteúdo */
-	--color-neutral: oklch(45% 0 0);
-	--color-neutral-content: oklch(85% 0 0);
-
-	/* 🎨 Cores de Acento e Semânticas */
-	--color-primary: oklch(65% 0.15 270);
-	--color-primary-content: oklch(100% 0 0);
-	--color-accent: oklch(70% 0.12 190);
-	--color-accent-content: oklch(100% 0 0);
-	--color-info: oklch(70% 0.12 240);
-	--color-success: oklch(75% 0.14 140);
-	--color-warning: oklch(80% 0.15 80);
-	--color-info-content: oklch(100% 0 0);
-	--color-success-content: oklch(100% 0 0);
-	--color-warning-content: oklch(100% 0 0);
-	--color-error-content: oklch(100% 0 0);
-
-	/* ✨ UI e Efeitos */
-	--radius-selector: 0.375rem;
+	--color-base-100: oklch(18% 0.005 285.823);
+	--color-base-200: oklch(21% 0.006 285.885);
+	--color-base-300: oklch(27% 0.006 286.033);
+	--color-base-content: oklch(98% 0 0);
+	--color-primary: oklch(92% 0.004 286.32);
+	--color-primary-content: oklch(14% 0.004 49.25);
+	--color-secondary: oklch(87% 0.006 286.286);
+	--color-secondary-content: oklch(14% 0.005 285.823);
+	--color-accent: oklch(62% 0.214 259.815);
+	--color-accent-content: oklch(14% 0.005 285.823);
+	--color-neutral: oklch(24% 0.006 285.885);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+	--color-info: oklch(74% 0.16 232.661);
+	--color-info-content: oklch(29% 0.066 243.157);
+	--color-success: oklch(69% 0.17 162.48);
+	--color-success-content: oklch(37% 0.077 168.94);
+	--color-warning: oklch(85% 0.199 91.936);
+	--color-warning-content: oklch(41% 0.112 45.904);
+	--color-error: oklch(70% 0.194 13.428);
+	--color-error-content: oklch(27% 0.105 12.094);
+	--radius-selector: 0.5rem;
 	--radius-field: 0.5rem;
-	--radius-box: 0.75rem;
-	--border: 1px;
-
-	/* ✨ Micro-interações */
-	--transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+	--radius-box: 1rem;
+	--size-selector: 0.21875rem;
+	--size-field: 0.21875rem;
+	--border: 1.5px;
+	--depth: 0;
+	--noise: 0;
 }
 @plugin "daisyui/theme" {
 	name: 'monochrome-pro-light';
 	color-scheme: light;
 
-	/* 🎨 Monochrome base */
 	--color-base-100: oklch(98% 0 0);
-	--color-base-200: oklch(95% 0 0);
-	--color-base-300: oklch(92% 0 0);
-	--color-base-content: oklch(15% 0 0);
-
-	/* 🎨 Cores neutras e de conteúdo */
-	--color-neutral: oklch(75% 0 0);
-	--color-neutral-content: oklch(25% 0 0);
-
-	/* 🎨 Cores de Acento e Semânticas */
-	--color-primary: oklch(55% 0.15 270);
-	--color-primary-content: oklch(100% 0 0);
-	--color-accent: oklch(60% 0.12 190);
-	--color-accent-content: oklch(15% 0 0);
-	--color-info: oklch(60% 0.12 240);
-	--color-success: oklch(65% 0.14 140);
-	--color-warning: oklch(70% 0.15 80);
-	--color-error: oklch(55% 0.18 25);
-	--color-info-content: oklch(15% 0 0);
-	--color-success-content: oklch(15% 0 0);
-	--color-warning-content: oklch(15% 0 0);
-	--color-error-content: oklch(100% 0 0);
-
-	/* ✨ UI e Efeitos */
-	--radius-selector: 0.375rem;
+	--color-base-200: oklch(92% 0.004 286.32);
+	--color-base-300: oklch(87% 0.006 286.286);
+	--color-base-content: oklch(14% 0.005 285.823);
+	--color-primary: oklch(27% 0.006 286.033);
+	--color-primary-content: oklch(96% 0.001 286.375);
+	--color-secondary: oklch(37% 0.013 285.805);
+	--color-secondary-content: oklch(96% 0.001 286.375);
+	--color-accent: oklch(62% 0.214 259.815);
+	--color-accent-content: oklch(14% 0.005 285.823);
+	--color-neutral: oklch(24% 0.006 285.885);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+	--color-info: oklch(74% 0.16 232.661);
+	--color-info-content: oklch(29% 0.066 243.157);
+	--color-success: oklch(69% 0.17 162.48);
+	--color-success-content: oklch(37% 0.077 168.94);
+	--color-warning: oklch(85% 0.199 91.936);
+	--color-warning-content: oklch(41% 0.112 45.904);
+	--color-error: oklch(70% 0.194 13.428);
+	--color-error-content: oklch(27% 0.105 12.094);
+	--radius-selector: 0.5rem;
 	--radius-field: 0.5rem;
-	--radius-box: 0.75rem;
-	--border: 1px;
+	--radius-box: 1rem;
+	--size-selector: 0.21875rem;
+	--size-field: 0.21875rem;
+	--border: 1.5px;
+	--depth: 0;
 	--noise: 0;
 }

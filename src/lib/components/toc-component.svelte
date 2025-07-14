@@ -47,18 +47,18 @@
 				</div>
 				<div>
 					<h3 class="text-base-content text-sm font-semibold">Table of Contents</h3>
-					<p class="text-neutral-content/70 text-xs">
+					<p class="text-base-content text-xs">
 						{totalSections} sections • Reading time of {estimatedReadTime} min
 					</p>
 				</div>
 			</div>
 
 			<div class="flex items-center gap-2">
-				<span class="text-neutral-content/60 hidden text-xs sm:inline">
+				<span class="text-base-content hidden text-xs sm:inline">
 					{isExpanded ? 'Recolher' : 'Expandir'}
 				</span>
 				<ChevronDown
-					class={`text-neutral-content/60 h-4 w-4 transition-transform duration-300${isExpanded ? ' rotate-180' : ''}`}
+					class={`text-base-content h-4 w-4 transition-transform duration-300${isExpanded ? ' rotate-180' : ''}`}
 				/>
 			</div>
 		</button>
@@ -79,12 +79,13 @@
 									<li in:fly={{ x: -15, delay: index * 40, duration: 250, easing: quintOut }}>
 										<button
 											onclick={() => scrollToSection(item.href)}
-											class="group text-neutral-content/70 hover:bg-base-200 w-full rounded-md px-3 py-2 text-left text-sm transition-colors duration-200"
+											class="group text-base-content hover:bg-base-200 w-full rounded-md px-3 py-2 text-left text-sm transition-colors duration-200"
 											style="padding-left: {12 + (item.depth - minDepth) * 16}px;"
 										>
 											<div class="flex items-start gap-3">
 												<!-- Indicador de nível -->
 												<div class="mt-1.5 flex items-center">
+													<!-- svelte-ignore element_invalid_self_closing_tag -->
 													<div
 														class={{
 															'group-hover:bg-primary h-1.5 w-1.5 rounded-full transition-colors duration-200': true,
@@ -115,10 +116,10 @@
 			</div>
 		{/if}
 
-		<div class="h-5">
+		<div class="mb-2 h-5">
 			{#if !isExpanded}
-				<div transition:fade={{ duration: 100, delay: 50 }} class="collapse mt-2 px-4 pb-2">
-					<div class="text-neutral-content/70 flex items-center justify-between text-xs">
+				<div transition:fade={{ duration: 70, delay: 10 }} class="collapse mt-2 px-4 pb-2">
+					<div class="text-base-content flex items-center justify-between text-xs">
 						<span>Click to see all sections</span>
 						<div class="flex items-center gap-2">
 							<List class="text-neutral-content/70 h-3 w-3" />
