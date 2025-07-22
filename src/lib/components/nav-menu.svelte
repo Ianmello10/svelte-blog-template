@@ -35,14 +35,14 @@
 
 <nav
 	class="navbar bg-base-100/80 shadow-base-300/10
-	 border-base-300/50 sticky top-4 z-50 mx-auto mt-4 w-full max-w-7xl rounded-2xl border
-	  shadow backdrop-blur-md
+	 border-base-300/70 sticky top-4 z-50 mx-auto mt-4 h-10 w-full max-w-7xl rounded-3xl
+	  border shadow backdrop-blur-md
 	 "
 >
 	<div class="flex w-full items-center justify-between px-4 py-2">
-		<a class="btn btn-ghost text-base-content text-lg" href="/">Svelblog</a>
+		<a class=" btn btn-ghost text-md" href="/">Svelblog</a>
 
-		<div class="flex items-center gap-2">
+		<div class="flex items-center justify-between">
 			{#if pageId === '/blog'}
 				<!-- Dropdown do DaisyUI -->
 				<label
@@ -94,9 +94,8 @@
 					{/if}
 				</label>
 			{:else}
-				<a class="btn btn-ghost text-base-content" href="/blog">Blog</a>
+				<a class="btn btn-sm btn-ghost text-base-content" href="/blog">Blog</a>
 			{/if}
-
 			<ThemeToggle />
 		</div>
 	</div>

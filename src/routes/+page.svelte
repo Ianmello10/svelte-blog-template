@@ -71,7 +71,7 @@
 					<div
 						class="bg-accent/10 group-hover:bg-accent/20 mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-colors duration-300"
 					>
-						<Bot size={32} class="text-accent" />
+						<Bot size={32} class="text-primary" />
 					</div>
 					<h3 class="text-base-content mb-4 text-2xl font-bold">Robots</h3>
 					<p class="text-base-content/70 leading-relaxed">
